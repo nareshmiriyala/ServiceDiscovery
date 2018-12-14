@@ -12,14 +12,14 @@ buildscript {
 plugins {
 	id 'com.google.cloud.tools.jib' version '0.9.2'
 }
-jib {
-	container {
-		jvmFlags = ['-Xms512m', '-Xdebug']
-		mainClass = 'au.com.redenergy.ServiceDiscovery.ServiceDiscoveryApplication'
-		args = []
-		ports = ['8761/tcp']
-	}
-}
+//jib {
+//	container {
+//		jvmFlags = ['-Xms512m', '-Xdebug']
+////		mainClass = 'au.com.redenergy.ServiceDiscovery.ServiceDiscoveryApplication'
+//		args = []
+//		ports = ['8761/tcp']
+//	}
+//}
 jib.to.image = 'servicediscovery/eureka-demo-app'
 //apply plugin: 'java'
 apply plugin: 'groovy'
